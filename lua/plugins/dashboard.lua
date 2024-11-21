@@ -25,7 +25,7 @@ return {
           {
             pane = 2,
             section = "terminal",
-            cmd = "chafa ~/media/pictures/wallpapers/calvinsnfhobbrd.jpg --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
+            cmd = "chafa ~/media/pictures/wallpapers/nvim.jpg --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
             height = 17,
             padding = 1,
           },
