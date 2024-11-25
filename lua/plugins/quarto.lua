@@ -29,6 +29,11 @@ return {
     },
   },
 
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = { "markdown", "quarto" },
+  },
+
   { -- paste an image from the clipboard or drag-and-drop
     "HakonHarnes/img-clip.nvim",
     event = "BufEnter",
@@ -78,5 +83,23 @@ return {
         table.insert(opts.sources, { name = source })
       end
     end,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters = {
+        prettier = {
+          options = {
+            ext_parsers = {
+              qmd = "markdown",
+            },
+          },
+        },
+      },
+      formatters_by_ft = {
+        quarto = { "prettierd", "prettier" },
+      },
+    },
   },
 }
