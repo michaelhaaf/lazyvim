@@ -16,7 +16,7 @@ return {
     },
   },
   {
-    "catppuccin/nvim",
+    "catppuccin",
     opts = {
       transparent_background = true,
     },

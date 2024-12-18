@@ -10,7 +10,6 @@ return {
     dependencies = {
       "neovim/nvim-lspconfig",
       "jmbuhr/otter.nvim",
-      "hrsh7th/nvim-cmp",
     },
     opts = {
       lspFeatures = {
@@ -62,26 +61,6 @@ return {
     config = function(_, opts)
       require("img-clip").setup(opts)
       vim.keymap.set("n", "<leader>ii", ":PasteImage<cr>", { desc = "insert [i]mage from clipboard" })
-    end,
-  },
-
-  {
-    "hrsh7th/nvim-cmp",
-    optional = true,
-    dependencies = {
-      "hrsh7th/cmp-calc",
-      "hrsh7th/cmp-emoji",
-      "kdheepak/cmp-latex-symbols",
-      "jmbuhr/cmp-pandoc-references",
-      "onsails/lspkind-nvim",
-      "jmbuhr/otter.nvim",
-    },
-    opts = function(_, opts)
-      opts.sources = opts.sources or {}
-      local additional_sources = { "calc", "emoji", "latex_symbols", "pandoc_references" }
-      for _, source in ipairs(additional_sources) do
-        table.insert(opts.sources, { name = source })
-      end
     end,
   },
 
