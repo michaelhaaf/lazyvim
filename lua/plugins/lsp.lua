@@ -44,16 +44,6 @@ return {
           },
         },
         { 'Bilal2453/luvit-meta', lazy = true }, -- optional `vim.uv` typings
-        { -- optional completion source for require statements and module annotations
-          'hrsh7th/nvim-cmp',
-          opts = function(_, opts)
-            opts.sources = opts.sources or {}
-            table.insert(opts.sources, {
-              name = 'lazydev',
-              group_index = 0, -- set group index to 0 to skip loading LuaLS completions
-            })
-          end,
-        },
         -- { "folke/neodev.nvim", enabled = false }, -- make sure to uninstall or disable neodev.nvim
       },
       { 'folke/neoconf.nvim', opts = {}, enabled = false },
@@ -119,8 +109,6 @@ return {
       vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = require('misc.style').border })
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-      capabilities.textDocument.completion.completionItem.snippetSupport = true
 
       -- also needs:
       -- $home/.config/marksman/config.toml :
