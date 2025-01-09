@@ -15,9 +15,6 @@ return {
       lspFeatures = {
         languages = { "r", "python", "julia", "bash", "lua", "html" },
       },
-      keymap = {
-        rename = "<leader>cr",
-      },
     },
     keys = {
       {
