@@ -3,12 +3,19 @@ return {
   -- disables hungry features for files larget than 2MB
   { "LunarVim/bigfile.nvim" },
 
-  -- add/delete/change can be done with the keymaps
-  -- ys{motion}{char}, ds{char}, and cs{target}{replacement}
   {
-    "kylechui/nvim-surround",
-    event = "VeryLazy",
-    opts = {},
+    "echasnovski/mini.surround",
+    opts = {
+      mappings = {
+        add = "gsa", -- Add surrounding in Normal and Visual modes
+        delete = "gsd", -- Delete surrounding
+        find = "gsf", -- Find surrounding (to the right)
+        find_left = "gsF", -- Find surrounding (to the left)
+        highlight = "gsh", -- Highlight surrounding
+        replace = "gsr", -- Replace surrounding
+        update_n_lines = "gsn", -- Update `n_lines`
+      },
+    },
   },
 
   { -- commenting with e.g. `gcc` or `gcip`
