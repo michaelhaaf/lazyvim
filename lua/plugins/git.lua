@@ -1,70 +1,63 @@
 -- git plugins
 
 return {
-  { 'sindrets/diffview.nvim' },
+  { "sindrets/diffview.nvim" },
 
   -- handy git ui
   {
-    'NeogitOrg/neogit',
+    "NeogitOrg/neogit",
     lazy = true,
-    cmd = 'Neogit',
+    cmd = "Neogit",
     keys = {
-      { '<leader>gg', ':Neogit<cr>', desc = 'neo[g]it' },
+      { "<leader>gg", ":Neogit<cr>", desc = "neo[g]it" },
     },
     config = function()
-      require('neogit').setup {
+      require("neogit").setup({
         disable_commit_confirmation = true,
         integrations = {
           diffview = true,
         },
-      }
+      })
     end,
   },
 
   {
-    'lewis6991/gitsigns.nvim',
-    enabled = true,
-    config = function()
-      require('gitsigns').setup {}
-    end,
-  },
-  {
-    'akinsho/git-conflict.nvim',
-    version = 'v2.1.0',
+    "akinsho/git-conflict.nvim",
+    version = "v2.1.0",
     init = function()
-      require('git-conflict').setup {
+      require("git-conflict").setup({
         default_mappings = false,
         disable_diagnostics = true,
-      }
+      })
     end,
     keys = {
-      { '<leader>gco', ':GitConflictChooseOurs<cr>' },
-      { '<leader>gct', ':GitConflictChooseTheirs<cr>' },
-      { '<leader>gcb', ':GitConflictChooseBoth<cr>' },
-      { '<leader>gc0', ':GitConflictChooseNone<cr>' },
-      { ']x', ':GitConflictNextConflict<cr>' },
-      { '[x', ':GitConflictPrevConflict<cr>' },
+      { "<leader>gpo", ":GitConflictChooseOurs<cr>" },
+      { "<leader>gpt", ":GitConflictChooseTheirs<cr>" },
+      { "<leader>gpb", ":GitConflictChooseBoth<cr>" },
+      { "<leader>gp0", ":GitConflictChooseNone<cr>" },
+      { "]x", ":GitConflictNextConflict<cr>" },
+      { "[x", ":GitConflictPrevConflict<cr>" },
     },
   },
   {
-    'f-person/git-blame.nvim',
+    "f-person/git-blame.nvim",
     init = function()
-      require('gitblame').setup {
+      require("gitblame").setup({
         enabled = false,
-      }
+      })
       vim.g.gitblame_display_virtual_text = 1
       -- vim.g.gitblame_enabled = 0
     end,
   },
 
   { -- github PRs and the like with gh - cli
-    'pwntester/octo.nvim',
+    "pwntester/octo.nvim",
     enabled = true,
-    cmd = 'Octo',
+    cmd = "Octo",
     config = function()
-      require('octo').setup()
-      vim.keymap.set('n', '<leader>gpl', ':Octo pr list<cr>', { desc = 'octo [p]r list' })
-      vim.keymap.set('n', '<leader>gpr', ':Octo review start<cr>', { desc = 'octo [r]eview' })
+      require("octo").setup()
+      vim.keymap.set("n", "<leader>gpl", ":Octo pr list<cr>", { desc = "octo [p]r list" })
+      vim.keymap.set("n", "<leader>gpr", ":Octo review start<cr>", { desc = "octo [r]eview" })
     end,
   },
 }
