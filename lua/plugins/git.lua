@@ -1,7 +1,6 @@
 -- git plugins
 
 return {
-  { "sindrets/diffview.nvim" },
 
   {
     "akinsho/git-conflict.nvim",
