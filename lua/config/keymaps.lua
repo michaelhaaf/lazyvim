@@ -3,14 +3,14 @@
 -- Add any additional keymaps here
 
 -- Prevent conflicts with Zellij (which uses Alt)
-vim.keymap.del("n", "<A-j>")
-vim.keymap.del("n", "<A-k>")
-vim.keymap.del("n", "<A-l>")
-vim.keymap.del("n", "<A-h>")
-vim.keymap.del("i", "<A-j>")
-vim.keymap.del("i", "<A-k>")
-vim.keymap.del("v", "<A-j>")
-vim.keymap.del("v", "<A-k>")
+-- vim.keymap.del("n", "<A-j>")
+-- vim.keymap.del("n", "<A-k>")
+-- vim.keymap.del("n", "<A-l>")
+-- vim.keymap.del("n", "<A-h>")
+-- vim.keymap.del("i", "<A-j>")
+-- vim.keymap.del("i", "<A-k>")
+-- vim.keymap.del("v", "<A-j>")
+-- vim.keymap.del("v", "<A-k>")
 
 -- TODO replace these actions with different binds
 -- vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
