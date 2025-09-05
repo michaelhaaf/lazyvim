@@ -11,5 +11,6 @@ return {
     zen = { enabled = true },
     lazygit = { enabled = true },
     scratch = { enabled = true },
+    indent = { enabled = false },
   },
 }
