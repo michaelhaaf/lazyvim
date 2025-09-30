@@ -38,6 +38,10 @@ return {
         },
       },
     },
-  }
+  },
+
+  {
+    "chrisbra/unicode.vim",
+  },
 
 }
