@@ -5,3 +5,4 @@
 vim.g.autoformat = false
 vim.diagnostic.enable(false)
 vim.opt.conceallevel=0
+vim.opt.path=',,,**'
