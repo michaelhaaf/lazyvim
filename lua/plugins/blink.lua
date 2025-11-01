@@ -1,4 +1,5 @@
 return {
+
   {
     "saghen/blink.cmp",
     dependencies = {
@@ -8,7 +9,7 @@ return {
     },
     opts = {
       keymap = {
-        preset = 'default',
+        preset = "default",
       },
       snippets = {
         preset = "luasnip",
@@ -27,21 +28,4 @@ return {
       },
     },
   },
-
-  {
-    "folke/noice.nvim",
-    optional = true,
-    opts = {
-      lsp = {
-        signature = {
-          auto_open = { enabled = false },
-        },
-      },
-    },
-  },
-
-  {
-    "chrisbra/unicode.vim",
-  },
-
 }

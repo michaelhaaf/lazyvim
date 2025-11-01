@@ -1,7 +1,17 @@
 return {
   {
+    "mason-org/mason.nvim",
+    opts = function(_, opts)
+      -- vim.list_extend(opts.ensure_installed, { "pyright", "black", "ruff-lsp", "ruff" })
+      vim.list_extend(opts.ensure_installed, {
+        "black",
+        "ruff",
+      })
+    end,
+  },
+  {
     "girishji/pythondoc.vim",
-    config = function ()
+    config = function()
       return {}
     end,
   },
