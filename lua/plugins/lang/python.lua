@@ -2,9 +2,7 @@ return {
   {
     "mason-org/mason.nvim",
     opts = function(_, opts)
-      -- vim.list_extend(opts.ensure_installed, { "pyright", "black", "ruff-lsp", "ruff" })
       vim.list_extend(opts.ensure_installed, {
-        "black",
         "ruff",
       })
     end,
@@ -15,6 +13,7 @@ return {
       return {}
     end,
   },
+
   {
     "linux-cultist/venv-selector.nvim",
     branch = "main", -- Important: VenvSelect is now using `main` as the updated branch again.
