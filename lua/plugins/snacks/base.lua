@@ -8,7 +8,8 @@ return {
       bigfile = { enabled = true },
       git = { enabled = true },
       gitbrowse = { enabled = true },
-      image = { enabled = true },
+      -- image disabled: Need a different terminal emulator (kitty, wezterm, or ghostty)
+      image = { enabled = false },
       zen = { enabled = true },
       lazygit = { enabled = true },
       scratch = { enabled = true },
@@ -24,5 +25,4 @@ return {
       indent = { enabled = false },
     },
   },
-
 }
