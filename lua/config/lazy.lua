@@ -64,5 +64,5 @@ require("lazy").setup({
       },
     },
   },
-  rocks = { enabled = false },
+  rocks = { enabled = true },
 })
