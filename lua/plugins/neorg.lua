@@ -32,7 +32,7 @@ return {
         },
         ["core.summary"] = {
           config = {
-            strategy = "by_path"
+            strategy = "default"
           },
         },
         ["core.dirman"] = {
